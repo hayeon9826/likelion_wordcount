@@ -1,13 +1,27 @@
-<h1>당신이 입력한 텍스트는 단어 {{total}}개로 구성되어 있습니다</h1>
+{% extends 'index.html'%}
+
+{% block content %}
+<div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview">
+<h3>당신이 입력한 텍스트는 단어 <b>{{total}}개</b> 로 구성되어 있습니다</h3>
 
 <a href = "{%url 'home'%}">다시 하기</a>
-<br>
+<br><hr>
 <h2>입력한 텍스트 : </h2>
 {{full}}
-
+<br><br>
 
 <h2>단어 카운트 : </h2>
 
 {% for word, count in dictionary %}
 {{word}} : {{count}}개 <br>
 {%endfor%}
+</div>
+</div>
+</div>
+</div>
+
+
+{%endblock%}

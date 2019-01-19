@@ -1,4 +1,11 @@
-<h1>안녕하세요, 여기서 글자를 세세요! </h1>
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-preview">
+<h2>안녕하세요:) <br>여기서 글자를 세어 보세요! </h2>
 
 <!-- <a href ="about/">About</a><br> -->
 <a href = "{%url 'about'%}">About</a><br>
@@ -8,3 +15,8 @@
     <input type='submit' value='Count'>
 
 </form>
+</div>
+</div>
+</div>
+</div>
+{%endblock%}
