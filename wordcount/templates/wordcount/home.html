@@ -1,0 +1,23 @@
+{% extends 'wordcount/index.html' %}
+
+{% block content %}
+<div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+      
+          <h2>안녕하세요:) <br>여기서 글자를 세어 보세요! </h2>
+
+<!-- <a href ="about/">About</a><br> -->
+          <div align ="center">
+          <a href = "{%url 'about'%}">About</a><br>
+          <hr>
+          <form action ="{%url 'result'%}">
+          <textarea cols='50' rows='10' name='full_text'></textarea><br>
+          <input type='submit' value='Count'>
+          </form>
+          </div>
+          </div>
+        </div>
+      </div>
+
+{%endblock%}
